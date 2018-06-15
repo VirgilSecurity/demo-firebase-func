@@ -34,7 +34,7 @@ firebase functions:config:set virgil.apiprivatekey="YOUR_API_PRIVATE_KEY" virgil
 > 2. Log back to the [Virgil Dashboard](https://dashboard.virgilsecurity.com/),
 > 3. Create an API key: the private key will be copied on your clipboard. Paste this API key and your API Key's ID into the cli command
 > 4. Go back to the dashboard, create an application and paste the Application ID into the cli command. Run it.
-
+* (Windows users only) In firebase.json rename `$RESOURCE_DIR` to `%RESOURCE_DIR%`
 * Run `firebase deploy --only functions`.
 *Note: While Cloud Functions are in Beta, this command may fail with an unexpected error (HTTP 503 "The service is currently unavailable" in the log file), in which case, simply try running it again.*
 
