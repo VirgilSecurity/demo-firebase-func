@@ -1,6 +1,7 @@
 import * as functions from 'firebase-functions';
 import * as express from 'express';
 import * as admin from 'firebase-admin';
+import * as cors from 'cors';
 import { JwtGenerator } from 'virgil-sdk';
 import { VirgilCrypto, VirgilAccessTokenSigner } from 'virgil-crypto';
 
@@ -43,6 +44,7 @@ const generator = new JwtGenerator({
   accessTokenSigner: new VirgilAccessTokenSigner(crypto)
 });
 
+app.use(cors({ origin: true, methods: 'OPTIONS,GET,HEAD,PUT,PATCH,POST,DELETE', }));
 app.use(validateFirebaseIdToken);
 app.post('/generate_jwt', (req: IRequestWithFirebaseUser, res: express.Response) => {
   if (!req.body || !req.body.identity) res.status(400).send('identity param is required');

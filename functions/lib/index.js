@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const functions = require("firebase-functions");
 const express = require("express");
 const admin = require("firebase-admin");
+const cors = require("cors");
 const virgil_sdk_1 = require("virgil-sdk");
 const virgil_crypto_1 = require("virgil-crypto");
 const app = express();
@@ -33,6 +34,7 @@ const generator = new virgil_sdk_1.JwtGenerator({
     apiKey: crypto.importPrivateKey(apiprivatekey),
     accessTokenSigner: new virgil_crypto_1.VirgilAccessTokenSigner(crypto)
 });
+app.use(cors({ origin: true, methods: 'OPTIONS,GET,HEAD,PUT,PATCH,POST,DELETE', }));
 app.use(validateFirebaseIdToken);
 app.post('/generate_jwt', (req, res) => {
     if (!req.body || !req.body.identity)
