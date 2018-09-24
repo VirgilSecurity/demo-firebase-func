@@ -1,5 +1,6 @@
-# End-to-End Encrypted Firebase Chat App backend setup
-This repo deploys the Firebase functions and backend settings necessary to run the [iOS](https://github.com/VirgilSecurity/demo-firebase-js), [Android](https://github.com/VirgilSecurity/demo-firebase-android) and [JavaScript](https://github.com/VirgilSecurity/demo-firebase-js) end-to-end encrypted, HIPAA-compliant Firebase chat apps.
+# Firebase backend setup for end-to-end encrypted HIPAA-compliant chat apps
+Client apps: [iOS](https://github.com/VirgilSecurity/demo-firebase-ios)  [Android](https://github.com/VirgilSecurity/demo-firebase-android)  [JavaScript](https://github.com/VirgilSecurity/demo-firebase-js)
+[HIPAA whitepaper](https://virgilsecurity.com/wp-content/uploads/2018/07/Firebase-HIPAA-Chat-Whitepaper-Virgil-Security.pdf).
 
 ### Create Firebase project
 Go to the [Firebase console](https://console.firebase.google.com) and create a new project. If you already have one that you want to use, open it and go to the next step.
