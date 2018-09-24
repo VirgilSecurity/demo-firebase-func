@@ -33,7 +33,7 @@ cd demo-firebase-func
 ```bash
 firebase login
 ```
-run `npm install -g firebase-tools` if you don't have it.
+> run `npm install -g firebase-tools` if you don't have it.
 * After a successful Firebase login, run:
 ```bash
 firebase init
