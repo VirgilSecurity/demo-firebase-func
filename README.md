@@ -8,7 +8,7 @@ Go to the [Firebase console](https://console.firebase.google.com) and create a n
 * Select the **Authentication** panel and then click the **Sign In Method** tab.
 *  Click **Email/Password** and turn on the **Enable** switch, then click **Save**.
 * Select the **Database** panel, click **Create database** under Firestore, choose **Start in test mode** and click **Enable**.
-  * Once the database is created, click on the **Rules** tab, click **Edit rules** and paste:
+* Once the database is created, click on the **Rules** tab, click **Edit rules** and paste:
   ```
   service cloud.firestore {
     match /databases/{database}/documents {
