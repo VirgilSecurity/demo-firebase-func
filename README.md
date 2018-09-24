@@ -1,13 +1,19 @@
 # Firebase backend setup for end-to-end encrypted HIPAA-compliant chat apps
 Client apps: [iOS](https://github.com/VirgilSecurity/demo-firebase-ios)  [Android](https://github.com/VirgilSecurity/demo-firebase-android)  [JavaScript](https://github.com/VirgilSecurity/demo-firebase-js)
+
 [HIPAA whitepaper](https://virgilsecurity.com/wp-content/uploads/2018/07/Firebase-HIPAA-Chat-Whitepaper-Virgil-Security.pdf).
 
-### Create Firebase project
-Go to the [Firebase console](https://console.firebase.google.com) and create a new project. If you already have one that you want to use, open it and go to the next step.
+## Pre-requisites
+* Latest [Node](https://nodejs.org/en/download)
+
+## Create Firebase project
+* Open the [Firebase console](https://console.firebase.google.com) and create a new project.
+
+> Or use one that you already have.
 
 ## Set up Firebase password auth for the project
 * Select the **Authentication** panel and then click the **Sign In Method** tab.
-*  Click **Email/Password** and turn on the **Enable** switch, then click **Save**.
+* Click **Email/Password** and turn on the **Enable** switch, then click **Save**.
 * Select the **Database** panel, click **Create database** under Firestore, choose **Start in test mode** and click **Enable**.
 * Once the database is created, click on the **Rules** tab, click **Edit rules** and paste:
   ```
@@ -24,13 +30,12 @@ Go to the [Firebase console](https://console.firebase.google.com) and create a n
 ## Set up the Firebase function
 This Firebase function will give out JWT tokens to all your Firebase-authenticated users
 
-* Clone the repository from our GitHub.
+* Clone the repo
   ```bash
   git clone https://github.com/VirgilSecurity/demo-firebase-func.git
   cd demo-firebase-func
   ```
-* Install [Node](https://nodejs.org/en/download) if you don't have one. Firebase recommends v6.14.0, but we tested the project on 8.x and it works.
-* Login with the Firebase cli:
+* Login with the Firebase cli
   ```bash
   firebase login
   ```
