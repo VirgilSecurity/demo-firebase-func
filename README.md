@@ -24,22 +24,22 @@ Go to the [Firebase console](https://console.firebase.google.com) and create a n
 This Firebase function will give out JWT tokens to all your Firebase-authenticated users
 
 * Clone the repository from our GitHub.
-```
+```bash
 git clone https://github.com/VirgilSecurity/demo-firebase-func.git
 cd demo-firebase-func
 ```
 * Install [Node](https://nodejs.org/en/download) if you don't have one. Firebase recommends v6.14.0, but we tested the project on 8.x and it works.
 * Login with the Firebase cli:
-```
+```bash
 firebase login
 ```
 run `npm install -g firebase-tools` if you don't have it.
 * After a successful Firebase login, run:
-```
+```bash
 firebase init
 ```
 * Select:
-```
+```bash
 Functions: Configure and deploy Cloud Functions
 ```
 Use the SPACEBAR to select the option, then hit ENTER to proceed.
@@ -47,7 +47,7 @@ Use the SPACEBAR to select the option, then hit ENTER to proceed.
 * Select your firebase project from the list, ENTER.
 
 * Select the following answers:
-```
+```bash
 ? What language would you like to use to write Cloud Functions? TypeScript
 ? Do you want to use TSLint to catch probable bugs and enforce style? Yes
 ? File functions/package.json already exists. Overwrite? No
@@ -60,15 +60,15 @@ Use the SPACEBAR to select the option, then hit ENTER to proceed.
 * Follow the steps to CREATE AN APPLICATION, choose END-TO-END ENCRYPTION -> CREATE APPLICATION -> BUILD SECURE, HIPAA-COMPLIANT FIREBASE CHAT
 * Click the DOWNLOAD CONFIG FILE FOR SAMPLES button to download your `config.json` file
 * Copy `config.json` to the project's root folder and run:
-```
+```bash
 cd functions
 npm install
 npm run configure
 ```
 * (Windows users only) In `firebase.json` rename `$RESOURCE_DIR` to `%RESOURCE_DIR%`
-* Run `firebase deploy --only functions`.
-*Note: While Cloud Functions are in Beta, this command may fail with an unexpected error (HTTP 503 "The service is currently unavailable" in the log file), in which case, simply try running it again.*
+* Run:
+```bash
+firebase deploy --only functions
+```
 
-
-
-* Go to the Firebase console -> Functions tab and take a note of your brand new function's url `https://YOUR_FUNCTION_URL.cloudfunctions.net/api` from the Event column. You'll need this when setting up your apps.
+**Copy function URL to the clipboard**: go back to the Firebase console -> Functions tab and take a note of your brand new function's url `https://YOUR_FUNCTION_URL.cloudfunctions.net/api` from the Event column. **You'll need this when setting up your mobile or web apps**.
