@@ -20,7 +20,7 @@
     "virgil-sdk": "^5.0.0"
   },
   "devDependencies": {
-    "firebase": "^4.12.1",
+    "firebase": "^5.5.1",
     "firebase-tools": "^4.2.1",
     "tslint": "^5.8.0",
     "typescript": "^2.5.3"
