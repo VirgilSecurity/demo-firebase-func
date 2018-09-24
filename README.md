@@ -30,29 +30,29 @@ Client apps: [iOS](https://github.com/VirgilSecurity/demo-firebase-ios)  [Androi
 ## Set up the Firebase function
 This Firebase function will give out JWT tokens to all your Firebase-authenticated users
 
-* Clone the repo
+* **Clone the repo**
   ```bash
   git clone https://github.com/VirgilSecurity/demo-firebase-func.git
   cd demo-firebase-func
   ```
-* Login with the Firebase cli
+* **Login with the Firebase cli**
   ```bash
   firebase login
   ```
   > run `npm install -g firebase-tools` if you don't have it.
-* After a successful Firebase login, run:
+* **Start Firebase cli**
   ```bash
   firebase init
   ```
-* Select:
+* **Select**:
   ```bash
   Functions: Configure and deploy Cloud Functions
   ```
   > Use the SPACEBAR to select the option, then hit ENTER to proceed.
 
-* Select your firebase project from the list, ENTER.
+* **Select your firebase project** from the list, ENTER.
 
-* Select the following answers:
+* **Select the following answers**:
   ```bash
   ? What language would you like to use to write Cloud Functions? TypeScript
   ? Do you want to use TSLint to catch probable bugs and enforce style? Yes
@@ -62,17 +62,22 @@ This Firebase function will give out JWT tokens to all your Firebase-authenticat
   ? File functions/src/index.ts already exists. Overwrite? No
   ? Do you want to install dependencies with npm now? Yes
   ```
-* Log in to your Virgil account. If you don't have one, [sign up for a free account](https://virgilsecurity.com/getstarted). 
-* Follow the steps to CREATE AN APPLICATION, choose END-TO-END ENCRYPTION -> CREATE APPLICATION -> BUILD SECURE, HIPAA-COMPLIANT FIREBASE CHAT
-* Click the DOWNLOAD CONFIG FILE FOR SAMPLES button to download your `config.json` file
-* Copy `config.json` to the project's root folder and run:
+
+* **[Sign up for a free Virgil account](https://virgilsecurity.com/getstarted)** 
+
+* **Get your Virgil application config file**:
+
+  * CREATE AN APPLICATION -> END-TO-END ENCRYPTION -> CREATE APPLICATION -> BUILD SECURE, HIPAA-COMPLIANT FIREBASE CHAT
+  * Click the DOWNLOAD CONFIG FILE FOR SAMPLES button to download your `config.json` file
+  
+* **Copy `config.json` to the project's root folder and run**:
   ```bash
   cd functions
   npm install
   npm run configure
   ```
 * (Windows users only) In `firebase.json` rename `$RESOURCE_DIR` to `%RESOURCE_DIR%`
-* Run:
+* **Deploy the function**:
   ```bash
   firebase deploy --only functions
   ```
