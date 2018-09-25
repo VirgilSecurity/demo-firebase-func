@@ -65,8 +65,8 @@ This Firebase function will give out JWT tokens to all your Firebase-authenticat
 
 * **Get your Virgil application config file**:
 
-  * CREATE AN APPLICATION -> END-TO-END ENCRYPTION -> CREATE APPLICATION -> BUILD SECURE, HIPAA-COMPLIANT FIREBASE CHAT
-  * Click the DOWNLOAD CONFIG FILE FOR SAMPLES button to download your `config.json` file
+  * **CREATE AN APPLICATION** -> **END-TO-END ENCRYPTION** -> **CREATE APPLICATION** -> **BUILD SECURE, HIPAA-COMPLIANT FIREBASE CHAT**
+  * Click the **DOWNLOAD CONFIG FILE** FOR SAMPLES button to download your `config.json` file
   
 * **Copy `config.json` to the project's root folder and run**:
   ```bash
