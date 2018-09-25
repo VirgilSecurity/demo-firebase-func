@@ -35,15 +35,13 @@ This Firebase function will give out JWT tokens to all your Firebase-authenticat
   git clone https://github.com/VirgilSecurity/demo-firebase-func.git
   cd demo-firebase-func
   ```
-* **Login with the Firebase cli**
+* **Start up the Firebase cli**
   ```bash
   firebase login
-  ```
-  > run `npm install -g firebase-tools` if you don't have it.
-* **Start Firebase cli**
-  ```bash
   firebase init
   ```
+> run `npm install -g firebase-tools` if you don't have it.
+
 * **Select**:
   ```bash
   Functions: Configure and deploy Cloud Functions
