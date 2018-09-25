@@ -40,7 +40,7 @@ This Firebase function will give out JWT tokens to all your Firebase-authenticat
   firebase login
   firebase init
   ```
-> run `npm install -g firebase-tools` if you don't have it.
+> run `npm install -g firebase-tools` if you don't have the cli installed.
 
 * **Select**:
   ```bash
