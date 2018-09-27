@@ -1,7 +1,4 @@
-# Firebase backend setup for end-to-end encrypted HIPAA-compliant chat apps
-Client apps: [iOS](https://github.com/VirgilSecurity/demo-firebase-ios)  [Android](https://github.com/VirgilSecurity/demo-firebase-android)  [JavaScript](https://github.com/VirgilSecurity/demo-firebase-js)
-
-[HIPAA whitepaper](https://virgilsecurity.com/wp-content/uploads/2018/07/Firebase-HIPAA-Chat-Whitepaper-Virgil-Security.pdf).
+# Firebase function setup for Virgil-Firebase integration
 
 ## Pre-requisites
 * Latest [Node](https://nodejs.org/en/download)
