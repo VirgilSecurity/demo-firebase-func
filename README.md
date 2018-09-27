@@ -39,7 +39,7 @@ This Firebase function will connect Firebase's and Virgil's authentication via J
   ```
 > run `npm install -g firebase-tools` if you don't have the cli installed.
 
-* **Select**:
+* **User your cursor keys to select**:
   ```bash
   Functions: Configure and deploy Cloud Functions
   ```
