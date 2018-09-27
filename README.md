@@ -72,9 +72,9 @@ This Firebase function will connect Firebase's and Virgil's authentication via J
   npm run configure
   ```
 * (Windows users only) In `firebase.json` rename `$RESOURCE_DIR` to `%RESOURCE_DIR%`
-* **Deploy the function**:
+* **And finally, deploy the function**:
   ```bash
   firebase deploy --only functions
   ```
 
-**Copy function URL to the clipboard**: go back to the Firebase console -> Functions tab and take a note of your brand new function's url `https://YOUR_FUNCTION_URL.cloudfunctions.net/api` from the Event column. **You'll need this when setting up your mobile or web apps**.
+**Copy the function's URL to the clipboard**: go back to the Firebase console -> Functions tab and take a note of your brand new function's url `https://YOUR_FUNCTION_URL.cloudfunctions.net/api` from the Event column. **You'll need this when setting up your apps**.
