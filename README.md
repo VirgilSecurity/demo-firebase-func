@@ -1,5 +1,7 @@
 # Firebase function setup for Virgil-Firebase integration
 
+[Watch setup tutorial video on YouTube (4 minutes)](https://youtu.be/j0BuBtugYmA)
+
 ## Pre-requisites
 * Latest [Node](https://nodejs.org/en/download)
 
