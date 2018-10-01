@@ -1,4 +1,4 @@
-# Firebase function setup for Virgil-Firebase integration
+# How to connect with Virgil and Firebase accounts for implementing end-to-end encryption
 
 [Watch setup tutorial video on YouTube (4 minutes)](https://youtu.be/j0BuBtugYmA)
 
