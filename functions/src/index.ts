@@ -47,8 +47,8 @@ const generator = new JwtGenerator({
 app.use(cors({ origin: true, methods: 'OPTIONS,GET,HEAD,PUT,PATCH,POST,DELETE', }));
 app.use(validateFirebaseIdToken);
 app.post('/generate_jwt', (req: IRequestWithFirebaseUser, res: express.Response) => {
-  if (!req.body || !req.body.identity) res.status(400).send('identity param is required');
-  const virgilJwtToken = generator.generateToken(req.body.identity);
+  const identity = req.user.email.replace('@virgilfirebase.com', '');
+  const virgilJwtToken = generator.generateToken(identity);
   res.json({ token: virgilJwtToken.toString() });
 });
 

@@ -37,9 +37,8 @@ const generator = new virgil_sdk_1.JwtGenerator({
 app.use(cors({ origin: true, methods: 'OPTIONS,GET,HEAD,PUT,PATCH,POST,DELETE', }));
 app.use(validateFirebaseIdToken);
 app.post('/generate_jwt', (req, res) => {
-    if (!req.body || !req.body.identity)
-        res.status(400).send('identity param is required');
-    const virgilJwtToken = generator.generateToken(req.body.identity);
+    const identity = req.user.email.replace('@virgilfirebase.com', '');
+    const virgilJwtToken = generator.generateToken(identity);
     res.json({ token: virgilJwtToken.toString() });
 });
 // This HTTPS endpoint can only be accessed by your Firebase Users.
