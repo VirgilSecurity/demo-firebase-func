@@ -56,8 +56,8 @@ const generator = new JwtGenerator({
 
 app.use(cors({ origin: true, methods: "OPTIONS,GET,HEAD,PUT,PATCH,POST,DELETE" }));
 app.use(validateFirebaseIdToken);
-app.post("/generate_jwt", (req: IRequestWithFirebaseUser, res: express.Response) => {
-  const identity = req.user.email.replace("@virgilfirebase.com", "");
+app.get("/virgil-jwt", (req: IRequestWithFirebaseUser, res: express.Response) => {
+  const identity = req.user.uid;
   const virgilJwtToken = generator.generateToken(identity);
   res.json({ token: virgilJwtToken.toString() });
 });
@@ -74,7 +74,7 @@ exports.createUser = functions.firestore
     const message = snap.data();
     const receiver = message.receiver;
     console.log("receiver", receiver);
-    admin
+    return admin
       .firestore()
       .collection("Users")
       .doc(receiver)
@@ -83,6 +83,7 @@ exports.createUser = functions.firestore
         console.log("message", message);
         const user = doc.data();
         const notification = {
+          data: { uid: user.uid },
           notification: {
             title: "new message",
             body: message.body
