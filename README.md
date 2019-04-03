@@ -1,4 +1,8 @@
-# How to connect your Virgil and Firebase accounts for implementing end-to-end encryption
+# This repository no longer maintained!
+
+It's still used by Android and IOS firebase demos, but it wasn't made for e3kit and different firebase authentication strategies. For e3kit please use https://github.com/VirgilSecurity/virgil-e3kit-firebase-func
+
+# How to connect your Virgil and Firebase accounts for implementing end-to-end encryption'
 
 [Watch setup tutorial video on YouTube (4 minutes)](https://youtu.be/j0BuBtugYmA)
 
